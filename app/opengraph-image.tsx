@@ -1,6 +1,9 @@
 import { ImageResponse } from 'next/og'
 import { EMAIL } from './content'
 
+// Sem isso o export estático rejeita a rota: ela é gerada no build, não por request.
+export const dynamic = 'force-static'
+
 export const alt = 'Guilherme Lopes, desenvolvedor full stack sênior e tech lead de front end'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
